@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script>
+      var horizontal = 12;
+      setTimeout("mueve()", 500);
+      function mueve() {
+        horizontal += 10;
+        TEXTO1.style.left = horizontal;
+        if (horizontal >= 200) horizontal = 12;
+        setTimeout("mueve()", 500);
+      }
+    </script>
+  </head>
+  <body>
+    <p id="TEXTO1" style="position: absolute; top: 16; left: 12">TEXTO</p>
+  </body>
+</html>
