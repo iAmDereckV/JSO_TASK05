@@ -1,0 +1,18 @@
+<!-- Texto que aparece y desaparece -->
+<html>
+  <head>
+    <script>
+      var estado = true;
+      setTimeout("ver()", 500);
+      function ver() {
+        estado = !estado;
+        if (estado == true) TEXTO1.style.visibility = "visible";
+        else TEXTO1.style.visibility = "hidden";
+        setTimeout("ver()", 500);
+      }
+    </script>
+  </head>
+  <body>
+    <p id="TEXTO1" style="visibility: visible">TEXTO</p>
+  </body>
+</html>
