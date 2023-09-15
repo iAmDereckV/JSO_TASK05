@@ -1,0 +1,36 @@
+<!-- Varias imágenes moviéndose en vertical automáticamente -->
+
+<html>
+  <head>
+    <script>
+      //para que cargue la imagen desde el principio
+      var dibujo = new Image();
+      dibujo.src = "image/img2.jpeg";
+      var vertical = 35;
+      var ida = true;
+      var estado = true;
+      setTimeout("mover()", 200);
+      function mover() {
+        estado = !estado;
+        if (estado == true) img.src = "image/img1.jpg";
+        else img.src = "image/img2.jpeg";
+        if (vertical <= 200 && ida == true) vertical += 10;
+        else {
+          vertical -= 10;
+          ida = false;
+          if (vertical <= 35) ida = true;
+        }
+        img.style.top = vertical;
+        setTimeout("mover()", 200);
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      name="img"
+      width="700px"
+      src="image/img1.jpg"
+      style="position: absolute; left: 12; top: 35"
+    />
+  </body>
+</html>
