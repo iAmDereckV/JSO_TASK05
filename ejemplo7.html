@@ -1,0 +1,28 @@
+<!-- Una imagen moviéndose en vertical automáticamente -->
+<html>
+  <head>
+    <script>
+      var vertical = 35;
+      var ida = true;
+      setTimeout("mover()", 200);
+      function mover() {
+        if (vertical <= 200 && ida == true) vertical += 10;
+        else {
+          vertical -= 10;
+          ida = false;
+          if (vertical <= 35) ida = true;
+        }
+        img.style.top = vertical;
+        setTimeout("mover()", 200);
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      name="img"
+      width="400px"
+      src="image/img1.jpg"
+      style="position: absolute; left: 12; top: 35"
+    />
+  </body>
+</html>
