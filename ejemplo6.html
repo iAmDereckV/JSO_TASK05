@@ -1,0 +1,21 @@
+<!-- Cambiar la imagen por medio de un control. En este caso una lista (select). Es igual que en el caso anterior. 
+  Lo único que cambia es el evento que gestiona la llamada a la función -->
+
+<html>
+  <head>
+    <script>
+      function cambio(valor) {
+        if (valor == "imagen1") img.src = "image/img1.jpg";
+        else img.src = "image/img2.jpeg";
+      }
+    </script>
+  </head>
+  <body>
+    <select size="3" name="lista" onChange="cambio(value);">
+      <option value="imagen1">Imagen 1</option>
+      <option value="imagen2">Imagen 2</option>
+    </select>
+    <br />
+    <img name="img" src="image/img2.jpeg" width="700px" />
+  </body>
+</html>
