@@ -1,1 +1,20 @@
 <!-- Imagen que cambia cuando entra y sale el ratón -->
+<html>
+  <head>
+    <script>
+      function pasa(valor) {
+        if (valor == 1) img.src = "image/img1.jpg";
+        else img.src = "image/img2.jpeg";
+      }
+    </script>
+  </head>
+  <body>
+    <img
+      name="img"
+      width="700px"
+      src="image/img2.jpeg"
+      onMouseOver="pasa(1);"
+      onMouseOut="pasa(2);"
+    />
+  </body>
+</html>
