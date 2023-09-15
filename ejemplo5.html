@@ -1,0 +1,23 @@
+<!-- Cambiamos la imagen según situemos el ratón en un texto o en otro -->
+<html>
+  <head>
+    <script>
+      function imag(valor) {
+        if (valor == 1) img.src = "image/img1.jpg";
+        else img.src = "image/img2.jpeg";
+      }
+    </script>
+  </head>
+  <body>
+    <table border="1" width="15%">
+      <tr>
+        <td width="100%"><p onMouseOver="imag(1);">IMAGEN 1</p></td>
+      </tr>
+      <tr>
+        <td width="100%"><p onMouseOver="imag(2);">IMAGEN 2</p></td>
+      </tr>
+    </table>
+    <br />
+    <img name="img" src="image/img1.jpg" width="700px" />
+  </body>
+</html>
